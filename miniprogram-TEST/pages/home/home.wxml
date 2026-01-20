@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="header-section">
+    <view class="header-main">
+      <view class="welcome-text">
+        <text class="main-title">您好，岐黄用户</text>
+      </view>
+      <view class="center-nav-btn" bindtap="navToCenter" hover-class="btn-hover" hover-stay-time="0">
+        <text>个人中心 〉</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="grid-container">
+    <view class="feature-card scan-card" bindtap="navToScan" hover-class="card-press-active" hover-stay-time="0">
+      <view class="card-content">
+        <text class="card-title">开始检测</text>
+        <text class="card-desc">拍照识别体质</text>
+      </view>
+      <view class="card-icon">📸</view>
+    </view>
+
+    <view class="feature-card archive-card" bindtap="navToArchive" hover-class="card-press-active" hover-stay-time="0">
+      <view class="card-content">
+        <text class="card-title">我的档案</text>
+        <text class="card-desc">历史检测报告</text>
+      </view>
+      <view class="card-icon">📁</view>
+    </view>
+
+    <view class="feature-card remind-card" bindtap="navToRemind" hover-class="card-press-active" hover-stay-time="0">
+      <view class="card-content">
+        <text class="card-title">家庭守护</text>
+        <text class="card-desc">查看家人记录</text>
+      </view>
+      <view class="card-icon">🛡️</view>
+    </view>
+  </view>
+</view>

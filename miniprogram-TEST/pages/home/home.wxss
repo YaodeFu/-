@@ -1,0 +1,109 @@
+page { 
+  background-color: #ffffff; 
+  height: 100vh; 
+  overflow: hidden; 
+}
+
+.container { 
+  padding: 30rpx 0; 
+  height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+  box-sizing: border-box; 
+}
+
+/* 头部对齐 90% 轴线 */
+.header-section { 
+  width: 85%;
+  margin: 0 auto 40rpx auto;
+}
+
+.header-main { display: flex; justify-content: space-between; align-items: center; }
+.main-title { font-size: 60rpx; font-weight: 800; color: #333; }
+
+.center-nav-btn { 
+  background: #e6f2f2; 
+  padding: 12rpx 24rpx; 
+  border-radius: 40rpx; 
+  color: #006a6a; 
+  font-size: 28rpx; 
+  font-weight: bold;
+}
+
+/* 核心容器：占据 90% */
+.grid-container { 
+  flex: 1; 
+  display: flex; 
+  flex-direction: column; 
+  width: 85%;
+  margin: 0 auto;
+  gap: 25rpx; 
+  padding-bottom: 40rpx; 
+}
+
+/* --- 极致修正：防止截断与报错 --- */
+.feature-card { 
+  width: 100%;
+  flex: 1;    
+  min-height: 250rpx; 
+  border-radius: 50rpx; 
+  /* 极致缩小内边距至 25rpx，为文字腾出所有空间 */
+  padding: 0 25rpx 0 35rpx; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  box-sizing: border-box;
+  box-shadow: 0 15rpx 40rpx rgba(0,0,0,0.12); 
+  
+  /* 分开书写 transition 避免工具报错 */
+  transition-property: transform, box-shadow;
+  transition-duration: 0.45s;
+  transition-timing-function: cubic-bezier(0.6, -0.4, 0.4, 1.4);
+  transform-origin: center;
+  will-change: transform;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: visible; /* 允许文字完整伸展 */
+  margin-right: 10rpx;
+}
+
+/* Q弹按下 */
+.card-press-active {
+  transform: scale(0.96); 
+  transition-duration: 0.1s;
+}
+
+.scan-card { background: linear-gradient(135deg, #ff4d4f, #ff7875); }
+.archive-card { background: linear-gradient(135deg, #1890ff, #70c5ff); }
+.remind-card { background: linear-gradient(135deg, #006a6a, #26a69a); }
+
+/* --- 终极字体放大方案 --- */
+.card-title { 
+  font-size: 80rpx; /* 继续放大！ */
+  font-weight: 900; 
+  color: #ffffff; 
+  display: block; 
+  white-space: nowrap; 
+  /* 核心：极致字间距压缩，防止最后一个字消失一半 */
+  letter-spacing: -4rpx; 
+  line-height: 1.5;
+  text-shadow: 0 2rpx 10rpx rgba(0,0,0,0.1);
+}
+
+.card-desc { 
+  font-size: rpx; 
+  color: rgba(255,255,255,0.6); 
+  white-space: nowrap;
+  letter-spacing: -1rpx;
+  margin-top: 5rpx;
+}
+
+.card-icon { 
+  font-size: 128rpx; /* 适当减小图标以保全巨大化的文字空间 */
+  flex-shrink: 0; 
+  opacity: 0.95;
+}

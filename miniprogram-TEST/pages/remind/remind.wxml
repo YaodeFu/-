@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="header">
+    <text class="title">家庭守护</text>
+    <text class="subtitle">为了您的隐私安全，仅支持面对面扫码绑定家人</text>
+  </view>
+
+  <view class="bind-box">
+    <view class="scan-main-btn" bindtap="handleScan">
+      <view class="scan-icon-circle">
+        <text class="plus-icon">+</text>
+      </view>
+      <view class="scan-text-box">
+        <text class="scan-t1">面对面扫码绑定</text>
+        <text class="scan-t2">扫描家人“我的档案”页面的二维码</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="member-list">
+    <view class="list-header">
+      <text class="list-label">已绑定的家人记录</text>
+      <text class="list-count">{{parentList.length}}/5</text>
+    </view>
+    
+    <view class="empty-tip" wx:if="{{parentList.length === 0}}">
+      <text>暂无绑定成员，点击上方按钮开始绑定</text>
+    </view>
+
+    <view class="simple-card" wx:for="{{parentList}}" wx:key="parent_openid">
+      <view class="card-content" bindtap="goToParentDetail" data-openid="{{item.parent_openid}}">
+        <view class="openid-header">
+          <text class="tag">家人识别码</text>
+          <text class="arrow">点击查看档案 ></text>
+        </view>
+        <text class="openid-value">{{item.parent_openid}}</text>
+      </view>
+      
+      <view class="un-link-area" catchtap="unBind" data-popenid="{{item.parent_openid}}">
+        <text class="un-link-btn">解除关联</text>
+      </view>
+    </view>
+  </view>
+</view>

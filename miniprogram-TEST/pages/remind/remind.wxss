@@ -1,0 +1,146 @@
+/* remind.wxss */
+page { 
+  background: #f7f9fc; 
+  font-family: sans-serif; 
+}
+
+.container { 
+  padding: 40rpx 0; /* 左右内边距设为0，通过子元素控制 85% 宽度 */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 核心：让所有子组件在页面水平居中 */
+}
+
+.header { 
+  width: 85%; /* 头部文字对齐到 85% */
+  margin-bottom: 40rpx; 
+}
+
+.title { 
+  font-size: 52rpx; 
+  font-weight: bold; 
+  color: #006a6a; 
+}
+
+.subtitle { 
+  font-size: 24rpx; 
+  color: #7a8e8e; 
+  margin-top: 12rpx; 
+  display: block; 
+}
+
+/* --- 扫码按钮区域：写死 85% --- */
+.bind-box { 
+  width: 85%; /* 强制占页面宽度的 85% */
+  margin-bottom: 60rpx; 
+}
+
+.scan-main-btn {
+  background: #006a6a;
+  border-radius: 32rpx;
+  padding: 40rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 12rpx 30rpx rgba(0, 106, 106, 0.2);
+  width: 100%; /* 撑满父级 bind-box */
+  box-sizing: border-box;
+}
+
+.scan-icon-circle {
+  width: 80rpx; height: 80rpx;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 24rpx;
+  display: flex; justify-content: center; align-items: center;
+  margin-right: 30rpx;
+  flex-shrink: 0;
+}
+
+.plus-icon { color: #fff; font-size: 50rpx; font-weight: bold; }
+.scan-text-box { display: flex; flex-direction: column; }
+.scan-t1 { font-size: 34rpx; font-weight: bold; color: #fff; }
+.scan-t2 { font-size: 22rpx; color: rgba(255, 255, 255, 0.7); margin-top: 4rpx; }
+
+/* --- 成员列表：写死 85% --- */
+.member-list {
+  width: 85%; /* 列表整体宽度 85% */
+}
+
+.list-header {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  margin-bottom: 24rpx;
+  padding: 0 10rpx;
+}
+
+.list-label { font-size: 30rpx; font-weight: bold; color: #444; }
+.list-count { font-size: 26rpx; color: #999; }
+
+.empty-tip {
+  text-align: center; 
+  padding: 100rpx 0; 
+  color: #ccc; 
+  font-size: 26rpx;
+}
+
+/* 列表卡片：宽度同步 --- */
+.simple-card {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 40rpx 32rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0,0,0,0.04);
+  border: 1rpx solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* 撑满父级 member-list */
+  box-sizing: border-box;
+}
+
+.card-content { width: 100%; }
+
+.openid-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.tag {
+  font-size: 20rpx; 
+  background: #e6f2f2; 
+  color: #006a6a;
+  padding: 4rpx 12rpx; 
+  border-radius: 8rpx; 
+  font-weight: bold;
+}
+
+.arrow { font-size: 22rpx; color: #006a6a; font-weight: bold; }
+
+.openid-value {
+  font-size: 28rpx;
+  color: #333;
+  background: #f9f9f9;
+  padding: 15rpx;
+  border-radius: 12rpx;
+  font-family: monospace;
+  word-break: break-all;
+  display: block;
+}
+
+.un-link-area {
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #f2f2f2;
+  text-align: right;
+  width: 100%;
+}
+
+.un-link-btn {
+  font-size: 26rpx;
+  color: #ff4d4f;
+  padding: 10rpx 0;
+  display: inline-block;
+  width: 150rpx;
+  text-align: right;
+}

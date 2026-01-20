@@ -1,0 +1,17 @@
+<view class="scan-container">
+  <view class="header-section">
+    <text class="title">体质图像识别</text>
+    <text class="subtitle">AI 为您进行面相与舌象分析</text>
+  </view>
+  <view class="scanner-frame">
+    <view class="corner top-left"></view>
+    <view class="corner top-right"></view>
+    <view class="corner bottom-left"></view>
+    <view class="corner bottom-right"></view>
+    <view class="hint-box">
+      <text class="hint-icon">📸</text>
+      <text>{{status || '请点击下方按钮拍摄'}}</text>
+    </view>
+  </view>
+  <button class="main-btn" bindtap="handleUpload">立即拍摄</button>
+</view>

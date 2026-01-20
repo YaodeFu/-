@@ -1,0 +1,10 @@
+.container { padding: 100rpx 40rpx; display: flex; flex-direction: column; align-items: center; background: #fff; min-height: 100vh; }
+.brand-section { text-align: center; margin-bottom: 120rpx; }
+.logo-emoji { font-size: 160rpx; margin-bottom: 20rpx; }
+.app-title { font-size: 52rpx; font-weight: bold; color: #006a6a; display: block; }
+.app-version { font-size: 28rpx; color: #bbb; margin-top: 20rpx; display: block; }
+
+.about-list { width: 100%; border-top: 1rpx solid #eee; }
+.about-item { display: flex; justify-content: space-between; padding: 45rpx 10rpx; border-bottom: 1rpx solid #eee; font-size: 34rpx; color: #444; }
+.arrow { color: #ddd; }
+.copyright-info { position: fixed; bottom: 80rpx; font-size: 24rpx; color: #ccc; }

@@ -1,0 +1,114 @@
+/* login.wxss - 修复加粗与箭头错位版 */
+page { 
+  background-color: #f7f9fb; 
+}
+
+.container { 
+  padding: 40rpx 30rpx; 
+}
+
+/* --- 1. 头部用户信息卡片 --- */
+.user-profile-card {
+  width: 100%; 
+  background: linear-gradient(135deg, #006a6a, #004d4d);
+  border-radius: 40rpx; 
+  padding: 50rpx 40rpx;
+  display: flex; 
+  box-sizing: border-box; 
+  margin-bottom: 30rpx;
+  box-shadow: 0 15rpx 30rpx rgba(0, 106, 106, 0.15);
+}
+
+.avatar-area {
+  width: 100rpx; height: 100rpx; 
+  background: rgba(255,255,255,0.2);
+  border-radius: 25rpx; 
+  display: flex; justify-content: center; align-items: center;
+  font-size: 60rpx; margin-right: 30rpx; flex-shrink: 0;
+}
+
+.user-info { flex: 1; min-width: 0; }
+.name { font-size: 44rpx; font-weight: bold; color: #fff; margin-bottom: 12rpx; display: block; }
+.id-full-box { background: rgba(0,0,0,0.12); padding: 12rpx 16rpx; border-radius: 12rpx; }
+.id-label { font-size: 18rpx; color: rgba(255,255,255,0.5); display: block; margin-bottom: 4rpx; }
+.id-value { font-size: 20rpx; color: #fff; word-break: break-all; font-family: monospace; line-height: 1.2; }
+
+/* --- 2. 统计卡片 --- */
+.stats-card {
+  width: 100%; background: #fff; border-radius: 36rpx;
+  margin-bottom: 30rpx; padding: 40rpx 0;
+  display: flex; justify-content: space-around;
+  box-shadow: 0 4rpx 20rpx rgba(0,0,0,0.03);
+}
+.stats-item { text-align: center; flex: 1; }
+.item-hover { background-color: #f0f4f4 !important; opacity: 0.8; }
+.stats-num { font-size: 44rpx; font-weight: bold; color: #006a6a; display: block; }
+.stats-label { font-size: 26rpx; color: #888; margin-top: 10rpx; }
+.stats-divider { width: 1rpx; height: 50rpx; background: #eee; align-self: center; }
+
+/* --- 3. 菜单列表：彻底重置按钮样式 --- */
+.menu-list { 
+  width: 100%; background: #fff; border-radius: 36rpx; overflow: hidden; margin-bottom: 40rpx; 
+}
+
+/* 核心：将所有菜单项（无论 view 还是 button）样式强制拉齐 */
+.menu-item {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 40rpx 40rpx !important;
+  background: transparent !important;
+  width: 100% !important;
+  border-bottom: 1rpx solid #f8f8f8;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  /* 解决 button 顽固样式 */
+  font-weight: normal !important;
+  line-height: normal !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
+}
+
+/* 彻底禁掉按钮伪元素的边框线 */
+.menu-item::after {
+  display: none !important;
+}
+
+.menu-item:last-child { border-bottom: none; }
+
+.menu-left { 
+  font-size: 32rpx; 
+  color: #333; 
+  font-weight: 400 !important; /* 强制正常粗细 */
+  display: flex;
+  align-items: center;
+}
+
+/* 箭头样式：修正位置偏移 */
+.menu-arrow { 
+  color: #ccc !important; 
+  font-size: 28rpx !important; 
+  font-weight: 400 !important;
+  margin-left: auto; /* 保证靠右对齐 */
+}
+
+/* --- 4. 退出登录 --- */
+.logout-wrap { padding: 0 10rpx; }
+.btn-logout { 
+  width: 100% !important; color: #ff4d4f; border: 1rpx solid #ff4d4f; 
+  background: #fff; border-radius: 50rpx; font-size: 30rpx; height: 90rpx; 
+  display: flex; justify-content: center; align-items: center;
+}
+
+/* --- 5. 登录引导页 --- */
+.login-guide { text-align: center; padding: 200rpx 60rpx; }
+.brand-logo { font-size: 160rpx; margin-bottom: 30rpx; }
+.brand-name { font-size: 48rpx; font-weight: bold; color: #006a6a; margin-bottom: 80rpx; display: block; }
+.btn-login { 
+  background: #006a6a; color: #fff; border-radius: 50rpx; width: 100% !important; 
+  height: 100rpx; display: flex; justify-content: center; align-items: center; font-size: 34rpx; 
+}
+.protocol-box { margin-top: 35rpx; font-size: 24rpx; display: flex; justify-content: center; align-items: center; }
+.protocol-text { color: #999; }
+.protocol-link { color: #006a6a; font-weight: 500; }

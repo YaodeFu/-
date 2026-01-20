@@ -1,0 +1,44 @@
+<view class="report-container">
+  <view class="report-header-bg"></view>
+
+  <view class="main-content">
+    <view class="report-card">
+      <view class="report-title">
+        <text class="title-txt">岐黄识体报告</text>
+        <view class="seal">已认证</view>
+      </view>
+      <view class="report-divider"></view>
+
+      <view class="result-section">
+        <text class="section-label">当前体质类别</text>
+        <view class="type-display">
+          <text class="type-name">{{reportData.body_type}}</text>
+          <view class="risk-indicator {{reportData.risk_level}}">
+            <text wx:if="{{reportData.risk_level == 'high'}}">需高度关注</text>
+            <text wx:elif="{{reportData.risk_level == 'medium'}}">需适当调理</text>
+            <text wx:else>状态良好</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="advice-section">
+        <view class="advice-header">
+          <text class="advice-icon">🌿</text>
+          <text>调理建议</text>
+        </view>
+        <view class="advice-content">
+          <text class="advice-text">{{reportData.advice}}</text>
+        </view>
+      </view>
+
+      <view class="footer-info">
+        <text>检测时间：{{reportData.time || '刚刚'}}</text>
+        <text class="copyright">由岐黄智助手 AI 引擎提供技术支持</text>
+      </view>
+    </view>
+
+    <view class="action-bar">
+      <button class="back-btn" bindtap="goBack">返回上一级</button>
+    </view>
+  </view>
+</view>

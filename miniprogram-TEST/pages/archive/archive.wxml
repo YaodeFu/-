@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="qr-section" wx:if="{{showQR}}">
+    <view class="qr-card">
+      <view class="qr-header">我的健康识别码</view>
+      <view class="qr-body">
+        <block wx:if="{{qrVisible}}">
+          <image class="qr-code-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{myOpenid}}" mode="aspectFit"></image>
+        </block>
+        <view wx:else class="qr-btn-placeholder" bindtap="showMyQR">
+          <view class="qr-action-btn">点击生成识别码</view>
+          <text class="qr-safety-tip">仅在需要时开启，保护隐私</text>
+        </view>
+      </view>
+      <view class="copy-box" bindtap="copyId">
+        <text class="id-text">{{myOpenid}}</text>
+        <text class="copy-tag">复制</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="history-container">
+    <view class="section-title">历史检测档案</view>
+    
+    <view class="history-card" wx:for="{{historyRecords}}" wx:key="index" bindtap="viewDetail" data-item="{{item}}">
+      <view class="card-left">
+        <view class="type-badge {{item.risk_level}}">{{item.body_type}}</view>
+        <view class="time-label">{{item.time}}</view>
+      </view>
+      <view class="card-right">
+        <text class="advice-preview">{{item.advice}}</text>
+        <text class="detail-arrow">></text>
+      </view>
+    </view>
+  </view>
+</view>

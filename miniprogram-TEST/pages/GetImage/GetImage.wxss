@@ -1,0 +1,103 @@
+page {
+  background-color: #f7f9fc;
+}
+
+.scan-container {
+  padding: 60rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.header-section {
+  margin-bottom: 60rpx;
+}
+
+.title {
+  font-size: 48rpx;
+  font-weight: 800;
+  color: #006a6a;
+  display: block;
+}
+
+.subtitle {
+  font-size: 26rpx;
+  color: #668080;
+  margin-top: 16rpx;
+  display: block;
+  line-height: 1.5;
+}
+
+/* 扫描框样式 */
+.scanner-frame {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 48rpx;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 16rpx 48rpx rgba(0, 106, 106, 0.05);
+  margin-bottom: 80rpx;
+  overflow: hidden;
+  border: 1rpx solid rgba(0, 106, 106, 0.1);
+}
+
+.corner {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  border: 6rpx solid #006a6a;
+}
+.top-left { top: 40rpx; left: 40rpx; border-right: none; border-bottom: none; border-radius: 12rpx 0 0 0; }
+.top-right { top: 40rpx; right: 40rpx; border-left: none; border-bottom: none; border-radius: 0 12rpx 0 0; }
+.bottom-left { bottom: 40rpx; left: 40rpx; border-right: none; border-top: none; border-radius: 0 0 0 12rpx; }
+.bottom-right { bottom: 40rpx; right: 40rpx; border-left: none; border-top: none; border-radius: 0 0 12rpx 0; }
+
+.status-overlay {
+  text-align: center;
+}
+.status-text {
+  font-size: 30rpx;
+  color: #006a6a;
+  font-weight: bold;
+}
+
+.hint-box {
+  text-align: center;
+  color: #99a;
+}
+.hint-icon {
+  font-size: 80rpx;
+  display: block;
+  margin-bottom: 20rpx;
+  opacity: 0.3;
+}
+
+/* 底部按钮 */
+.button-group {
+  padding-bottom: 40rpx;
+}
+.main-btn {
+  background-color: #006a6a;
+  color: white;
+  height: 110rpx;
+  border-radius: 55rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34rpx;
+  font-weight: bold;
+  box-shadow: 0 8rpx 24rpx rgba(0, 106, 106, 0.2);
+}
+.main-btn:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+.tip-text {
+  text-align: center;
+  font-size: 22rpx;
+  color: #99a;
+  margin-top: 30rpx;
+}
